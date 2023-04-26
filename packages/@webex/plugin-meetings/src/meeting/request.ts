@@ -669,6 +669,10 @@ export default class MeetingRequest extends StatelessWebexPlugin {
       body.annotation = options?.annotationInfo;
     }
 
+    if (options?.annotation) {
+      body.annotation = options?.annotation;
+    }
+
     // @ts-ignore
     return this.request({
       uri: options.uri,
